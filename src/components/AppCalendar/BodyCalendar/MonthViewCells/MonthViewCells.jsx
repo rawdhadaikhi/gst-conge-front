@@ -49,7 +49,8 @@ const CellsCalendar = ({
                                 (typeDay(logged, "date", formattedDate) && isSameMonth(day, monthStart))
                             ) && <>
                                     <label> </label>
-                                    <label> Logued Hrs : 8:4 </label>
+                                    <label> title :"sickness" </label>
+                                    <label> date deb : </label>
                                 </>}
                         </div>
                     </div>

@@ -4,6 +4,8 @@ import { generateHourIntervals, typeDay} from "./utlis/helpersCalendar";
 
 //import useAuth from "../../../core/hooks/useAuth";
 import data from './Data';
+import demandeService from "./CalendarService";
+import { computeHeadingLevel } from "@testing-library/react";
 
 let currentDate = new Date();
 const calendarState = {
@@ -51,6 +53,8 @@ const calendarReducer = (state, action) => {
 
 const useCalendar = () => {
 
+    const [demandes , setDemandes] = useState([]);
+
     const [CalendarState, dispatch] = useReducer(calendarReducer, calendarState);
    // const { authenticatedUser } = useAuth();
 
@@ -77,8 +81,25 @@ const useCalendar = () => {
   /*  useEffect(() => {
     }, [isLoading, error, authenticatedUser])*/
 
+    const getDemandeData = async () => {
+        try{
+            const res = await demandeService.getApprovedDemande() ;
+            if(res) {
+                setDemandes(res)
+            }
+        }catch(error){
+              setError(error);
+              console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getDemandeData()
+    })
+
     return {
         data,
+        demandes,
         isLoading,
         setIsLoading,
         handleViewChange,
