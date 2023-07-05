@@ -1,0 +1,107 @@
+ /******************************** MONTH VIEW CELLS STYLING  ***********************/
+ .calendar .body .cell {
+     position: relative;
+     height: 7em;
+     overflow: hidden;
+     cursor: pointer;
+     border-right: 1px solid #C0CFFA;
+     border-top: 1px solid #C0CFFA;
+     background: #fff;
+ }
+
+ .calendar .body .cell .number {
+     position: absolute;
+     font-size: 82.5%;
+     line-height: 1;
+     top: .75em;
+     right: .75em;
+     font-weight: 700;
+     color: #959595;
+ }
+
+ .body>.body {
+     display: flex;
+     border-left: 1px solid #C0CFFA;
+ }
+
+ .informationCell {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-top: 4px;
+ }
+
+ .informationCell label {
+     font-size: 10px;
+     color: var(--textHightLighst);
+     opacity: 0.6;
+ }
+
+ .extraHours {
+     margin: 2px;
+     height: 30px;
+     padding: 4px;
+     font-size: 14px;
+     color: #f8eaa1;
+     background: #f3f7d1;
+     border-radius: 2px;
+     border: 1px dotted #f5e69c;
+ }
+
+ .unloggedHours {
+     margin: 2px;
+     font-size: 14px;
+     padding: 4px;
+     height: 30px;
+     color: #e6986c;
+     background: #f5e2d6;
+     border-radius: 2px;
+     border: 1px dotted #ffbd97;
+ }
+
+ .loggedHours {
+     margin: 2px;
+     font-size: 14px;
+     padding: 4px;
+     height: 30px;
+     color: #88eeb4;
+     background: #c9f8dc;
+     border-radius: 2px;
+     border: 1px dotted #9cf1c1;
+ }
+
+ .calendar .body>.body .disabled {
+     background: #f5f3f3;
+     opacity: 0.8;
+ }
+
+ .disabled .shift,
+ .isWeekend .shift,
+ .calendar .body>.body .isWeekend .informationCell,
+ .calendar .body>.body .disabled .informationCell {
+     display: none;
+ }
+
+ @media only screen and (max-width: 768px) {
+     .calendar .body .cell {
+         height: 5em;
+     }
+
+     .calendar .body .cell .number {
+         font-size: 62.5%;
+     }
+
+     .informationCell {
+         display: none;
+     }
+
+     .extraHours,
+     .loguedHours,
+     .unloguedHours {
+         height: 18px;
+     }
+
+     .shift {
+         display: none;
+     }
+ }

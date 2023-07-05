@@ -1,0 +1,92 @@
+/********************************  GLOBAL STYLING DAYS NAMES  ***********************/
+.rowCalendar {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  border: none;}
+
+.days {
+  font-weight: 500;
+  color: var(--textHightLight);
+  font-size: 75%;
+  color: #6171A9;
+  background: #fff;
+  align-items: center;
+  width: 100%;}
+
+/******************************** MONTH VIEW DAYS NAMES STYLING  ***********************/
+.colCalendar-center {
+  height: 40px;
+  padding: 10px;
+  border-right: 1px solid #C0CFFA;}
+
+.month.colCalendar.colCalendar-center {
+  border-top: 1px solid #C0CFFA;}
+
+.month.colCalendar.colCalendar-center:first-child {
+  border-left: 1px solid  #C0CFFA;}
+
+  /******************************** WEEK && DAILY  VIEW DAYS NAMES STYLING  ***********************/
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #99aef3;
+  background: #e4e8f3;
+  height: 3em;
+  font-size: 14px;
+  width: 100%;
+  border-top: 1px dotted #C0CFFA;
+  border-bottom: 1px dotted  #C0CFFA;
+  border-left: 1px dotted  #C0CFFA;
+  border-radius: 2px;}
+
+
+.day .cell {
+  position: relative;
+  height: 3em;
+  cursor: pointer;
+  border-bottom: 1px solid #C0CFFA;
+  border-left: 1px solid  #C0CFFA ;
+  border-right: 1px solid  #C0CFFA;
+  align-items: center;
+  width: 100%;
+  background: #fff;}
+
+/******************************** WEEK VIEW DAYS NAMES STYLING  ***********************/
+
+.week .cell {
+  position: relative;
+  height: 3em;
+  cursor: pointer;
+  border-left: 1px solid  #e1e6f3;;
+  border-top: 1px solid  #e1e6f3;;
+  align-items: center;}
+
+.isWeekendWeekly {
+  background: #f5f3f3;
+  border-right: 1px dotted  #C0CFFA;
+  border-radius: 2px;
+}
+  
+.extraHoursWeekly {
+  background: #f3f7d1;
+  border: 1px dotted #f5e69c;
+  border-radius: 2px;
+}
+
+.unloggedHoursWeekly {
+  background: #f5e2d6;
+  border-radius: 2px;
+  border: 1px dotted #ffbd97
+}
+
+.loggedHoursWeekly {
+  background: #c9f8dc;
+  border: 1px dotted #9cf1c1;
+  border-radius: 2px;
+}
+

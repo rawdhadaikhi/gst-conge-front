@@ -1,0 +1,131 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0px;
+}
+
+.header .leftHeaderCalendar {
+    display: flex;
+}
+
+.header .leftHeaderCalendar .todayBtn {
+    display: flex;
+    width: auto;
+    height: 30px;
+}
+
+.header .leftHeaderCalendar .todayBtn span {
+    align-self: center;
+    font-weight: 500;
+}
+
+.header .leftHeaderCalendar .todayBtn svg {
+    color: #6171A9;
+    margin-right: 5px;
+}
+
+.header .rightHeaderCalendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .rightHeaderCalendar span {
+    margin-left: 6px;
+    border-radius: 4px;
+    background-color: var(----rbacPrimary);
+    font-size: 12px;
+    padding: 5px 15px;
+    color: #6171A9;
+    border: 1px solid #6171A9;
+    align-self: center;
+    font-weight: 500;
+}
+
+.header .rightHeaderCalendar span:hover {
+    transition: .15s ease-out;
+    background-color: var(--rbacPrimaryHover);
+    font-weight: 700;
+}
+
+.header .leftHeaderCalendar .todayBtn span {
+    transition: .15s ease-out;
+    font-size: 12px;
+    color: #6171A9;
+}
+
+.header .leftHeaderCalendar .todayBtn {
+    border-radius: 4px;
+}
+
+.header .rightHeaderCalendar div:hover span {
+    color: #6171A9;
+}
+
+.header .centerHeaderCalendar {
+    display: flex;
+    padding-left: 120px;
+}
+
+.header .centerHeaderCalendar .icon svg {
+    color: #6171A9;
+    width: 25px;
+    height: 25px;
+}
+
+.header .centerHeaderCalendar div {
+    font-weight: 500;
+    font-size: 22px;
+    color: #6171A9;
+    margin: 0 15px;
+}
+
+.rightheaderResponsive {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .leftHeaderCalendar .todayBtn svg {
+        width: 25px;
+    }
+
+    .header .rightHeaderCalendar {
+        display: none;
+    }
+
+    .rightheaderResponsive {
+        display: block;
+    }
+
+    .rightheaderResponsive .selectView {
+        background-color: #C0CFFA;
+        padding: 5px;
+        color: #6171A9;
+        border: none;
+        border-radius: 4px;
+    }
+
+    .header .centerHeaderCalendar {
+        padding: 0;
+    }
+
+    .header .centerHeaderCalendar div {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .header .centerHeaderCalendar .icon svg {
+        color: #6171A9;
+        width: 16px;
+        height: 16px;
+        margin: 0 10px;
+    }
+}
+
+.todayBtn,
+.icon,
+.rightHeaderCalendar {
+    cursor: pointer;
+}
